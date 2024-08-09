@@ -1,6 +1,5 @@
 import { auth, signOut } from "@/auth";
 import { Button } from "@nextui-org/react";
-import Link from "next/link";
 import { FaRegSmile } from "react-icons/fa";
 
 export default async function Home() {
@@ -14,8 +13,8 @@ export default async function Home() {
         <div>
           <pre>{JSON.stringify(session, null, 2)}</pre>
           <form action={async () => {
-            'use server';
-            await signOut();
+              'use server';
+              await signOut();
           }}>
             <Button 
               type="submit"
